@@ -1,44 +1,11 @@
-import { useRef, useEffect, useState } from "react";
 import { FiExternalLink } from "react-icons/fi";
 
 import { projects } from "../data";
 import Reveal from "./Reveal";
 
-const Projects = ({ setSectionID, setLinkActive }) => {
-  const ref = useRef(null);
-  const [isInView, setIsInView] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const top = window.scrollY;
-      const { offsetTop, offsetHeight } = ref.current;
-
-      if (top >= offsetTop && top < offsetTop + offsetHeight) {
-        setIsInView(true);
-      } else {
-        setIsInView(false);
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
-
-  useEffect(() => {
-    if (isInView) {
-      setLinkActive(true);
-      setSectionID(`#${ref.current.id}`);
-    } else {
-      setLinkActive(false);
-      setSectionID("");
-    }
-  }, [isInView, setLinkActive]);
-
+const Projects = () => {
   return (
-    <section ref={ref} id="projects" className="mb-16 md:mb-24 lg:mb-36">
+    <section id="projects" className="mb-16 md:mb-24 lg:mb-36">
       <Reveal className="sticky top-0 my-4 w-full bg-[#112130]/40  px-3 py-5 shadow-md backdrop-blur lg:hidden">
         <h2 className="text-lg uppercase">projects</h2>
       </Reveal>
