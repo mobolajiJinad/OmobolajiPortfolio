@@ -64,14 +64,18 @@ export const projects = [
     imgSrc: xshot,
     projectLink: "https://xshot.vercel.app/",
     name: "X-shot",
-    shortText: "A static photography website. Designed by OnileIsmail.",
+    shortText: "A static photography website.",
+    designer: {
+      name: "Onile Ismail",
+      twitterLink: "https://twitter.com/lyhamsea",
+    },
     tools: ["reactjs", "TailwindCSS", "react-router-dom"],
   },
   {
     imgSrc: foodz,
     projectLink: "https://foodz-squady.vercel.app/",
     name: "Foodz",
-    shortText: "This is a static landing page for a restaurant called Foodz",
+    shortText: "This is a static landing page for a restaurant called Foodz.",
     tools: ["html", "cSS"],
   },
 ];

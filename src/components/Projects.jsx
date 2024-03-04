@@ -2,6 +2,7 @@ import { FiExternalLink } from "react-icons/fi";
 
 import { projects } from "../data";
 import Reveal from "./Reveal";
+import { Link } from "react-router-dom";
 
 const Projects = () => {
   return (
@@ -30,7 +31,18 @@ const Projects = () => {
                 </h3>
               </a>
               <p className="text-sm text-gray-300 md:text-base">
-                {project.shortText}
+                {project.shortText}{" "}
+                {project.designer && (
+                  <span className="mt-2 block text-sm text-gray-300 md:text-base">
+                    Designed by{" "}
+                    <Link
+                      to={project.designer.twitterLink}
+                      className="hover:text-teal-300"
+                    >
+                      {project.designer.name}
+                    </Link>
+                  </span>
+                )}
               </p>
 
               <div>
