@@ -37,7 +37,7 @@ const Projects = () => {
                     Designed by{" "}
                     <Link
                       to={project.designer.twitterLink}
-                      className="hover:text-teal-300"
+                      className="text-teal-300 hover:underline"
                     >
                       {project.designer.name}
                     </Link>

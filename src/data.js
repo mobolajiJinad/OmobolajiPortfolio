@@ -18,6 +18,7 @@ import {
 import xshot from "../src/assets/projects/xshot.png";
 import foodz from "../src/assets/projects/foodz.png";
 import tukayMeme from "../src/assets/projects/tukayMeme.png";
+import threadsAppClone from "../src/assets/projects/threadsAppClone.png";
 
 export const navs = [
   {
@@ -52,6 +53,14 @@ export const skills = [
 
 export const projects = [
   {
+    imgSrc: threadsAppClone,
+    projectLink: "https://threads-app-clone-omobolaji.vercel.app/",
+    name: "Thread App Clone",
+    shortText:
+      "I'm trying to clone a popular social media app, threads by meta. It's currently incomplete though.",
+    tools: ["nextjs", "TailwindCSS"],
+  },
+  {
     imgSrc: tukayMeme,
     projectLink: "https://tukaymeme.vercel.app/",
     name: "Tukay Meme coin",
@@ -59,7 +68,6 @@ export const projects = [
       'I decided to join a trend on Twitter by using a popular "tukay" meme to create a landing page for an imaginative meme coin bearing the same name - Tukay.',
     tools: ["reactjs", "TailwindCSS", "react-dom", "react-icons"],
   },
-
   {
     imgSrc: xshot,
     projectLink: "https://xshot.vercel.app/",
