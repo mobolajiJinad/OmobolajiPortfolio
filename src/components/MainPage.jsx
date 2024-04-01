@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { NavHashLink } from "react-router-hash-link";
 import { FaXTwitter, FaGithub, FaDev } from "react-icons/fa6";
 import { SiGmail } from "react-icons/si";
@@ -65,19 +65,25 @@ const MainPage = () => {
 };
 
 const Navs = () => {
+  const { hash } = useLocation();
+
   return (
     <div className="hidden w-fit lg:mb-14 lg:block">
       {navs.map((nav, index) => {
+        console.log(hash === `#${nav.name}`);
         return (
           <NavHashLink
             key={index}
             to={nav.path}
             smooth
-            activeStyle={{ transform: "translateX(1.25rem)" }}
-            className="group my-2 flex cursor-pointer items-center transition-all duration-100 hover:translate-x-5"
+            className={`${hash === `#${nav.name}` && "translate-x-5"} group my-2 flex cursor-pointer items-center transition-all duration-100 hover:translate-x-5`}
           >
-            <div className="mr-4 h-0.5 w-6 bg-gray-500 group-hover:-scale-x-150 group-hover:bg-white"></div>
-            <nav className="text-base uppercase text-gray-300 group-hover:text-white">
+            <div
+              className={`${hash === `#${nav.name}` && "-scale-x-150 bg-white"} mr-4 h-0.5 w-6 bg-gray-500 group-hover:-scale-x-150 group-hover:bg-white`}
+            ></div>
+            <nav
+              className={`${hash === `#${nav.name}` && "text-white"}text-base uppercase text-gray-300 group-hover:text-white`}
+            >
               {nav.name}
             </nav>
           </NavHashLink>
