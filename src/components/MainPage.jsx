@@ -29,8 +29,7 @@ const MainPage = () => {
             Freelancer
           </h3>
           <p className="break-words text-sm text-gray-300 md:mt-5 md:max-w-[450px] md:text-base lg:mt-2 lg:w-96">
-            I build pixel-perfect and accessible software with care and
-            creativity.
+            Full stack developer in the JS ecosystem.
           </p>
         </Reveal>
       </div>
@@ -68,9 +67,8 @@ const Navs = () => {
   const { hash } = useLocation();
 
   return (
-    <div className="hidden w-fit lg:mb-14 lg:block">
+    <div className="hidden w-fit px-2 lg:mb-14 lg:block">
       {navs.map((nav, index) => {
-        console.log(hash === `#${nav.name}`);
         return (
           <NavHashLink
             key={index}
@@ -79,10 +77,10 @@ const Navs = () => {
             className={`${hash === `#${nav.name}` && "translate-x-5"} group my-2 flex cursor-pointer items-center transition-all duration-100 hover:translate-x-5`}
           >
             <div
-              className={`${hash === `#${nav.name}` && "-scale-x-150 bg-white"} mr-4 h-0.5 w-6 bg-gray-500 group-hover:-scale-x-150 group-hover:bg-white`}
+              className={`${hash === `#${nav.name}` && "-scale-x-150 bg-white"} mr-4 h-[3px] w-7 bg-gray-500 group-hover:-scale-x-150 group-hover:bg-white`}
             ></div>
             <nav
-              className={`${hash === `#${nav.name}` && "text-white"}text-base uppercase text-gray-300 group-hover:text-white`}
+              className={`${hash === `#${nav.name}` && "text-lg text-white"} text-base uppercase text-gray-300 group-hover:text-white`}
             >
               {nav.name}
             </nav>

@@ -41,7 +41,7 @@ export const skills = [
   { name: "Javascript", icon: IoLogoJavascript },
   { name: "ReactJS", icon: IoLogoReact },
   { name: "TailwindCSS", icon: TbBrandTailwind },
-  { name: "NextJS", icon: TbBrandNextjs },
+  { name: "Next.JS", icon: TbBrandNextjs },
   { name: "Framer", icon: SiFramer },
   { name: "TypeScript", icon: TbBrandTypescript },
   { name: "Axios", icon: SiAxios },

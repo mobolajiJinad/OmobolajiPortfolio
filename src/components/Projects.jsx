@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 
 const Projects = () => {
   return (
-    <section id="projects" className="mb-16 md:mb-24 lg:mb-36">
+    <section id="projects" className="mb-14 md:mb-16 lg:mb-24">
       <Reveal className="sticky top-0 my-4 w-full bg-[#112130]/40  px-3 py-5 shadow-md backdrop-blur lg:hidden">
         <h2 className="text-lg uppercase">projects</h2>
       </Reveal>
@@ -15,15 +15,15 @@ const Projects = () => {
         return (
           <Reveal
             key={index}
-            className="mb-2 flex flex-col items-center justify-between gap-2 rounded-xl border border-[#112130] px-2 py-8 hover:bg-slate-800/50 hover:opacity-80 hover:shadow-md md:flex-row md:px-4"
+            className="mb-2 flex flex-col justify-center gap-2 rounded-xl border border-[#112130] px-2 py-8 hover:bg-slate-800/50 hover:opacity-80 hover:shadow-md md:px-4"
           >
             <img
               src={project.imgSrc}
               alt="Project Image Source"
-              className="my-4 mr-2 h-fit w-full md:w-1/3"
+              className="my-4 mr-2 h-fit w-full"
             />
 
-            <div className="md:w-2/3">
+            <div>
               <a href={project.projectLink} target="_blank" className="group">
                 <h3 className="mb-4 flex items-center text-xl capitalize group-hover:text-teal-300">
                   {project.name}{" "}
@@ -51,7 +51,7 @@ const Projects = () => {
                     return (
                       <li
                         key={index}
-                        className="my-1 w-fit cursor-pointer rounded-lg bg-teal-400/10 px-3 py-1 font-medium uppercase text-teal-300"
+                        className="my-1 w-fit cursor-pointer rounded-lg bg-teal-400/10 px-3 py-1 text-sm font-medium uppercase text-teal-300"
                       >
                         {tool}
                       </li>

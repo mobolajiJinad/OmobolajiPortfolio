@@ -1,20 +1,22 @@
 import { useState } from "react";
 import { motion, useAnimationControls } from "framer-motion";
 
-import loadingGif from "../assets/loadingGif.gif";
-
 const Loader = () => {
   const name = "Omobolaji".split("");
 
   return (
-    <div className="flex h-screen w-screen flex-col items-center justify-center bg-black">
-      <img src={loadingGif} className="mx-auto block w-full max-w-96" />
-
-      <div>
+    <div
+      style={{ backgroundColor: "#112130" }}
+      className="flex h-screen w-screen justify-center"
+    >
+      <motion.h1
+        animate={{ y: ["0vh", "90vh", "50vh"] }}
+        transition={{ duration: 2.5 }}
+      >
         {name.map((letter, index) => {
           return <NameSpan key={index}>{letter}</NameSpan>;
         })}
-      </div>
+      </motion.h1>
     </div>
   );
 };

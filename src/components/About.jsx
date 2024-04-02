@@ -2,7 +2,7 @@ import Reveal from "./Reveal";
 
 const About = () => {
   return (
-    <section id="about" className="mb-16 md:mb-24 lg:mb-36">
+    <section id="about" className="mb-14 md:mb-16 lg:mb-24">
       <Reveal className="sticky top-0 my-4 w-full bg-[#112130]/40 px-3 py-5 shadow-md backdrop-blur lg:hidden">
         <h2 className="text-lg uppercase">about</h2>
       </Reveal>
