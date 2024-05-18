@@ -20,20 +20,6 @@ import foodz from "../src/assets/projects/foodz.png";
 import tukayMeme from "../src/assets/projects/tukayMeme.png";
 import threadsAppClone from "../src/assets/projects/threadsAppClone.png";
 
-export const navs = [
-  {
-    path: "#about",
-    name: "about",
-  },
-  {
-    path: "#skills",
-    name: "skills",
-  },
-  {
-    path: "#projects",
-    name: "projects",
-  },
-];
 
 export const skills = [
   { name: "HTML5", icon: TbBrandHtml5 },

@@ -10,7 +10,7 @@ const Loader = () => {
       className="flex h-screen w-screen justify-center"
     >
       <motion.h1
-        animate={{ y: ["0vh", "90vh", "50vh"] }}
+        animate={{ y: ["0vh", "85vh", "50vh"] }}
         transition={{ duration: 2.5 }}
       >
         {name.map((letter, index) => {

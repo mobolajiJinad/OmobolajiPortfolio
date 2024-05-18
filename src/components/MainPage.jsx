@@ -1,29 +1,27 @@
-import { Link, useLocation } from "react-router-dom";
-import { NavHashLink } from "react-router-hash-link";
+import { Link } from "react-router-dom";
 import { FaXTwitter, FaGithub, FaDev } from "react-icons/fa6";
 import { SiGmail } from "react-icons/si";
 
 import wavingRobot from "../assets/wavingRobot.gif";
-import { navs } from "../data";
 import Reveal from "./Reveal";
 
 const MainPage = () => {
   return (
     <>
-      <div className="my-4 mb-8 flex w-full flex-col md:mb-6 md:flex-row md:justify-between md:gap-4 lg:my-2 lg:mb-6 lg:flex-col">
+      <div className="my-4 mb-8 flex w-full flex-col md:mb-6 md:flex-row md:items-center md:justify-between md:gap-4 lg:my-2 lg:mb-6 lg:flex-col lg:items-start">
         <Reveal className="my-0 flex items-center justify-center md:w-1/2 md:flex-col lg:flex-row lg:justify-normal">
           <img width={70} height={70} src={wavingRobot} alt="Hello" />
           <h3
             style={{ transform: "scaleY(2)" }}
-            className="mx-4 my-2 whitespace-nowrap font-PermanentMarker text-3xl font-bold uppercase leading-10 lg:text-5xl"
+            className="mx-4 my-2 ml-6 whitespace-nowrap font-PermanentMarker text-3xl font-bold uppercase leading-10 lg:text-5xl"
           >
             hi there
           </h3>
         </Reveal>
 
-        <Reveal className="px-2 md:w-1/2">
+        <Reveal className="xs:text-center px-2 pl-4 sm:text-left md:w-1/2 md:pl-2">
           <h1 className="my-2 whitespace-nowrap text-2xl font-bold md:text-3xl lg:text-3xl">
-            AbdulQuadri Jinad
+            Omobolaji (Squady)
           </h1>
           <h3 className="my-2 text-xl font-bold md:text-xl lg:text-2xl">
             Freelancer
@@ -34,9 +32,7 @@ const MainPage = () => {
         </Reveal>
       </div>
 
-      <Navs />
-
-      <div className="my-4 flex w-full justify-center px-2 pr-4 md:my-0 lg:justify-normal lg:pr-6">
+      <div className="my-4 flex w-full justify-center px-2 pr-4 md:my-0 lg:mb-10 lg:justify-normal lg:pr-6">
         <Link
           to="https://github.com/mobolajiJinad"
           target="_blank"
@@ -60,34 +56,6 @@ const MainPage = () => {
         </Link>
       </div>
     </>
-  );
-};
-
-const Navs = () => {
-  const { hash } = useLocation();
-
-  return (
-    <div className="hidden w-fit px-2 lg:mb-14 lg:block">
-      {navs.map((nav, index) => {
-        return (
-          <NavHashLink
-            key={index}
-            to={nav.path}
-            smooth
-            className={`${hash === `#${nav.name}` && "translate-x-5"} group my-2 flex cursor-pointer items-center transition-all duration-100 hover:translate-x-5`}
-          >
-            <div
-              className={`${hash === `#${nav.name}` && "-scale-x-150 bg-white"} mr-4 h-[3px] w-7 bg-gray-500 group-hover:-scale-x-150 group-hover:bg-white`}
-            ></div>
-            <nav
-              className={`${hash === `#${nav.name}` && "text-lg text-white"} text-base uppercase text-gray-300 group-hover:text-white`}
-            >
-              {nav.name}
-            </nav>
-          </NavHashLink>
-        );
-      })}
-    </div>
   );
 };
 

@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 const Projects = () => {
   return (
     <section id="projects" className="mb-14 md:mb-16 lg:mb-24">
-      <Reveal className="sticky top-0 my-4 w-full bg-[#112130]/40  px-3 py-5 shadow-md backdrop-blur lg:hidden">
+      <Reveal className="sticky top-0 my-4 w-full bg-[#112130]/40  px-3 py-5 shadow-md backdrop-blur lg:static">
         <h2 className="text-lg uppercase">projects</h2>
       </Reveal>
 
@@ -15,7 +15,7 @@ const Projects = () => {
         return (
           <Reveal
             key={index}
-            className="mb-2 flex flex-col justify-center gap-2 rounded-xl border border-[#112130] px-2 py-8 hover:bg-slate-800/50 hover:opacity-80 hover:shadow-md md:px-4"
+            className="mb-2 flex flex-col justify-center gap-2 rounded-xl border border-[#112130] px-2 py-6 hover:bg-slate-800/50 hover:opacity-80 hover:shadow-md md:px-4"
           >
             <img
               src={project.imgSrc}
@@ -51,7 +51,7 @@ const Projects = () => {
                     return (
                       <li
                         key={index}
-                        className="my-1 w-fit cursor-pointer rounded-lg bg-teal-400/10 px-3 py-1 text-sm font-medium uppercase text-teal-300"
+                        className="my-1 w-fit cursor-pointer rounded-lg bg-teal-400/10 px-3 py-2 text-sm font-medium uppercase text-teal-300"
                       >
                         {tool}
                       </li>
