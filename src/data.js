@@ -19,7 +19,7 @@ import xshot from "../src/assets/projects/xshot.png";
 import foodz from "../src/assets/projects/foodz.png";
 import tukayMeme from "../src/assets/projects/tukayMeme.png";
 import threadsAppClone from "../src/assets/projects/threadsAppClone.png";
-
+import devlinks from "../src/assets/projects/devlinks.png";
 
 export const skills = [
   { name: "HTML5", icon: TbBrandHtml5 },
@@ -39,11 +39,18 @@ export const skills = [
 
 export const projects = [
   {
+    imgSrc: devlinks,
+    projectLink: "https://devlinks-lcft.vercel.app/",
+    name: "Devlinks",
+    shortText:
+      "A link sharing app, where users can create profiles and share links to these profiles all in one place.",
+    tools: ["nextjs", "TailwindCSS", "MongoDB", "next-auth"],
+  },
+  {
     imgSrc: threadsAppClone,
     projectLink: "https://threads-app-clone-omobolaji.vercel.app/",
     name: "Thread App Clone",
-    shortText:
-      "I'm trying to clone a popular social media app, threads by meta. It's currently incomplete though.",
+    shortText: "Social Media App, UI inspired by Meta",
     tools: ["nextjs", "TailwindCSS"],
   },
   {
@@ -52,7 +59,7 @@ export const projects = [
     name: "Tukay Meme coin",
     shortText:
       'I decided to join a trend on Twitter by using a popular "tukay" meme to create a landing page for an imaginative meme coin bearing the same name - Tukay.',
-    tools: ["reactjs", "TailwindCSS", "react-dom", "react-icons"],
+    tools: ["reactjs", "TailwindCSS", "react-icons"],
   },
   {
     imgSrc: xshot,

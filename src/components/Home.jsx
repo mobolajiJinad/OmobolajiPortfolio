@@ -19,8 +19,9 @@ const Home = () => {
 
         <footer className="w-full text-center text-sm">
           <p className="text-gray-300">
-            Built from scratch with 💙
-            <span>&copy; </span>All rights reserved. {new Date().getFullYear()}
+            Built from scratch with 💙 {"   "}
+            <span className="block md:inline">&copy; </span>All rights reserved.{" "}
+            {new Date().getFullYear()}
           </p>
         </footer>
       </div>
