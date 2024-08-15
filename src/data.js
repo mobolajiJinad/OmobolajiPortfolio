@@ -44,7 +44,7 @@ export const projects = [
     name: "Devlinks",
     shortText:
       "A link sharing app, where users can create profiles and share links to these profiles all in one place.",
-    tools: ["nextjs", "TailwindCSS", "MongoDB", "next-auth"],
+    tools: ["nextjs", "TailwindCSS", "MongoDB", "next-auth", "typescript"],
   },
   {
     imgSrc: threadsAppClone,
