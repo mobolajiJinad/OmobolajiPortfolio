@@ -16,6 +16,7 @@ import {
 } from "react-icons/tb";
 
 import xshot from "../src/assets/projects/xshot.png";
+import timbuCloud from "../src/assets/projects/timbuCloud.png";
 import foodz from "../src/assets/projects/foodz.png";
 import tukayMeme from "../src/assets/projects/tukayMeme.png";
 import threadsAppClone from "../src/assets/projects/threadsAppClone.png";
@@ -45,6 +46,13 @@ export const projects = [
     shortText:
       "A link sharing app, where users can create profiles and share links to these profiles all in one place.",
     tools: ["nextjs", "TailwindCSS", "MongoDB", "next-auth", "typescript"],
+  },
+  {
+    imgSrc: timbuCloud,
+    projectLink: "https://timbu-cloud-hng-task-two-omobolaji.vercel.app/",
+    name: "Timbu Cloud",
+    shortText: "A mini e commerce web site",
+    tools: ["reactjs", "TailwindCSS"],
   },
   {
     imgSrc: threadsAppClone,
